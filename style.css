@@ -1,0 +1,93 @@
+@font-face {
+    font-family: Charlie;
+    src: url("font/checkpointcharlie.ttf");
+}
+@font-face {
+    font-family: Stamp;
+    src: url("font/oldstamper.ttf");
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;   
+    user-select: none;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+	overflow: clip;
+}
+#menu_video {
+    position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.overlay {
+	width: 100%;
+	height: 100%;
+	background: black;
+	position: absolute;
+	opacity: 0.9;
+}
+.content {
+    position: absolute;
+    width: 100%;
+	height: 100%;    
+}
+h1, h2, h3 {
+    font-family: "Charlie";
+    color: white;
+    text-transform: capitalize;
+}
+h1 {
+    font-size: 400%;
+}
+.menu .button {
+    text-align: center;
+	font-size: 300%;
+	padding: 20px;  
+}
+.button { 
+	color: white;
+	text-decoration: none;
+	display: block;
+    font-family: "Stamp";
+    transition-property: color;
+    transition-duration: 500ms;
+    width: max-content;
+}
+.toright {
+    text-align: right;
+}
+.menu {
+	margin-top: 10%;
+	margin-left: 21%;
+    width: max-content;
+}
+.button:hover {
+	color: #998570bb;
+    cursor: pointer;
+}
+.settings {
+	display: grid;
+	width: 50%;
+	height: max-content;
+	background: #000000f7;
+	position: absolute;
+	left: 25%;
+	top: 25%;
+	padding: 35px;
+	border-radius: 7px;
+}
+.halfsplitter {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.fillsplitter {
+    display: grid;
+    grid-template-columns: auto max-content;
+}
+input {
+    margin: 15px;
+}
