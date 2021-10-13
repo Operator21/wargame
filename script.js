@@ -1,17 +1,10 @@
-let clickElement = $("#clickElement");
-let hoverElement = $("#hoverElement");
-let musicElement = $("#musicElement");
-
-let musicControl = $("musicControl");
-let audioControl = $("#audioControl");
-
-
-let buttons = document.querySelectorAll(".button");
-buttons.forEach(button => {
-    console.log(button);
-    button.addEventListener("mouseover", PlayHover);
-    button.addEventListener("click", PlayClick);
-})
+function AssignSoundEffects(array){
+    array.forEach(button => {
+        console.log(button);
+        button.addEventListener("mouseover", PlayHover);
+        button.addEventListener("click", PlayClick);
+    })
+}
 
 function PlayHover(){
     hoverElement.currentTime = 0;

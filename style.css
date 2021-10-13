@@ -16,6 +16,7 @@ body {
 	width: 100vw;
 	height: 100vh;
 	overflow: clip;
+	background-color: black;
 }
 #menu_video {
     position: absolute;
@@ -93,4 +94,34 @@ input {
 }
 .hidden {
 	display: none;
+}
+.unit {
+	background: #084008;
+	display: block;
+	border: 3px #002a00 solid;
+	box-sizing: content-box;
+	width: 70px;
+	height: 70px;
+	margin: 1px;
+	transition-property: background-color;
+	transition-duration: 500ms;
+}
+.trainingMenu {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	width: max-content;
+}
+.unit img {
+	width: 70px;
+	height: 70px;
+}
+.unit:hover {
+	background-color: rgb(95, 95, 0);
+	cursor: pointer;
+}
+#trainingMenu {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	width: max-content;
+	margin: 0 auto;
 }

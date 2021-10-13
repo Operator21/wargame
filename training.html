@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Training</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="trainingMenu">
+            <span class="unit">
+                <img src="img/soldier_icon.png">
+            </span>
+            <span class="unit">
+                <img src="img/soldier_icon.png">
+            </span>
+            <span class="unit">
+                <img src="img/soldier_icon.png">
+            </span>
+            <span class="unit">
+                <img src="img/lt_35.png">
+            </span>
+            <span class="unit">
+                <img src="img/lt_35.png">
+            </span>
+        </div>
+        <audio id="hoverElement" src="sound/hover.ogg"></audio>
+        <audio id="clickElement" src="sound/click.ogg"></audio>
+        <script src="minimize.js"></script>
+        <script src="script.js"></script>
+        <script>
+            let clickElement = $("#clickElement");
+            let hoverElement = $("#hoverElement");
+            let musicElement = $("#musicElement");
+
+            AssignSoundEffects($A(".unit"));
+        </script>
+    </body>
+</html>

@@ -36,5 +36,16 @@
         <audio id="clickElement" src="sound/click.ogg"></audio>
         <script src="minimize.js"></script>
         <script src="script.js"></script>
+        <script>
+            let clickElement = $("#clickElement");
+            let hoverElement = $("#hoverElement");
+            let musicElement = $("#musicElement");
+
+            let musicControl = $("musicControl");
+            let audioControl = $("#audioControl");
+
+            let buttons = $A(".button");
+            AssignSoundEffects(buttons);
+        </script>
     </body>
 </html>
