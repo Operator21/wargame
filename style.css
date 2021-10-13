@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;   
     user-select: none;
+	color: white;
 }
 body {
 	width: 100vw;
@@ -106,11 +107,6 @@ input {
 	transition-property: background-color;
 	transition-duration: 500ms;
 }
-.trainingMenu {
-	display: grid;
-	grid-template-columns: auto auto auto;
-	width: max-content;
-}
 .unit img {
 	width: 70px;
 	height: 70px;
@@ -119,9 +115,51 @@ input {
 	background-color: rgb(95, 95, 0);
 	cursor: pointer;
 }
-#trainingMenu {
+#buildingMenu {
+	display: grid;
+	grid-row: 2;
+	grid-column: 2;
+	grid-template-columns: 45% 10% 45%;
+	width: 70%;
+	margin: 0 auto;
+}
+.genericMenu {
+	width: max-content;
+	height: max-content;
 	display: grid;
 	grid-template-columns: auto auto auto auto;
-	width: max-content;
+}
+#map {
 	margin: 0 auto;
+	display: block;
+	height: 500px;
+	width: 100%;
+	background-image: url("img/map.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.mainUI {
+	display: grid;
+	grid-template-columns: 15% 70% 25%;
+	grid-template-rows: 80vh 20vh;
+}
+#resources {
+	background: #012b01;
+	border: 5px #00570a solid;
+	height: max-content;
+}
+.resource {
+	display: grid;
+	grid-template-columns: 80% auto;
+	padding: 10px;
+}
+.fader {
+	opacity: 0;
+	background: black;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	transition-property: opacity;
+	transition-duration: 1s;
 }

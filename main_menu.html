@@ -15,12 +15,12 @@
         <div class="content">
             <div class="menu">
                 <h1>TO ARMS 1938</h1>
-                <a class="button">Play</a>
+                <a class="button" onclick="GoTo('training')">Play</a>
                 <a class="button" onclick="OpenPopUp('.settings')">Options</a>
             </div>
         </div>
         <audio id="musicElement" src="sound/menu_track.ogg" autoplay loop></audio>
-        <div class="settings popup">
+        <div class="settings popup hidden">
             <div class="fillsplitter">
                 <h2>OPTIONS</h2>
                 <a class="button toright" onclick="ClosePopUp(this)">x</a>
