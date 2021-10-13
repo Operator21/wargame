@@ -33,9 +33,9 @@ function ChangeAudioVolume(event){
 }
 
 function ClosePopUp(a){
-    a.closest(".popup").style.display = "none";
+    a.closest(".popup").classList.add("hidden");
 }
 
 function OpenPopUp(id){
-    $(id).style.display = "grid";
+    $(id).classList.remove("hidden");
 }

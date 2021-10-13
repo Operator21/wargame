@@ -91,3 +91,6 @@ h1 {
 input {
     margin: 15px;
 }
+.hidden {
+	display: none;
+}
