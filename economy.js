@@ -1,5 +1,5 @@
 let influence = 100;
-let population = 13541767;
+let population = 13410750;
 let troops = 0;
 let materials = 0;
 let oil = 0;
