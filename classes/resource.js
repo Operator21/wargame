@@ -39,7 +39,6 @@ class Resource{
 
     GenerateHTMLView(desc, val, container){
         let span = $N("span");
-        
         container.append(span);
         span.append(desc);
         span.append(val);
