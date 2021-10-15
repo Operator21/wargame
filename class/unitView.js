@@ -15,7 +15,9 @@ class UnitView{
         span.classList.add("unit");
         let object = this;
         span.addEventListener("click", function() {
-            object.Clicked();
+            let success = object.Clicked();
+            if(!success)
+                alert("Not enough resources");
         });
 
         img.src = this.Path;
@@ -29,11 +31,20 @@ class UnitView{
 
     Clicked(){
         console.log(this.name);
+        let canBuy = true;
         this.costArray.forEach(cost => {
-            cost.resource.Substract(cost.amount);
+            if(cost.resource.value < cost.amount) {
+                canBuy = false;
+            }
         });
-        this.gainArray.forEach(gain => {
-            gain.resource.Add(gain.amount);
-        });
+        if(canBuy){
+            this.costArray.forEach(cost => {
+                cost.resource.Substract(cost.amount);
+            });
+            this.gainArray.forEach(gain => {
+                gain.resource.Add(gain.amount);
+            });
+        }       
+        return canBuy;
     }
 }
