@@ -34,7 +34,7 @@ class Resource{
         } else {
             this.viewElement.innerHTML = this.value;
         }       
-        console.log("resource refresh");
+        //console.log("resource refresh");
     }
 
     GenerateHTMLView(desc, val, container){
