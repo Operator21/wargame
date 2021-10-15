@@ -29,7 +29,7 @@ class Resource{
     RefreshView(){
         if(this.value > 999999){
             this.viewElement.innerHTML = (this.value/1000000).toFixed(1) + "M";
-        }else if(this.value > 99999){
+        }else if(this.value > 999){
             this.viewElement.innerHTML = (this.value/1000).toFixed(1)  + "k";
         } else {
             this.viewElement.innerHTML = this.value;
