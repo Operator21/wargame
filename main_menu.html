@@ -30,6 +30,9 @@
             <input id="musicControl" type="range" min="0" max="1" step="0.1" value="1">
             <h3>AUDIO</h3>
             <input id="audioControl" type="range" min="0" max="1" step="0.1" value="1" oninput="ChangeAudioVolume(event)">
+            <h3>SCREEN WINDOW</h3>
+            <a class="button" onclick="document.documentElement.requestFullscreen();">Fullscreen</a>
+            <a class="button" onclick="document.exitFullscreen();">Standard</a>
         </div>
 
         <div class="credits popup hidden">

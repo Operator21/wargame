@@ -43,10 +43,10 @@ class AudioPlayer {
         this.clickPlayer.play();
     }
 
-    PlaySong(path){
+    PlaySong(path, loop = true){
         this.SetSource(this.musicPlayer, path);
         this.musicPlayer.currentTime = 0;
-        this.musicPlayer.loop = true;
+        this.musicPlayer.loop = loop;
         this.musicPlayer.play();
     }
 
