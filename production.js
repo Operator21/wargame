@@ -10,3 +10,5 @@ let factoryView = new UnitView("factory", "building", constructionView, [new Res
 let infantryView = new UnitView("infantry", "unit", trainingView, [new ResourceAmount(population, 10000), new ResourceAmount(materials, 2500)], [new ResourceAmount(infantry, 10000)]);
 let tankView = new UnitView("tank", "unit", trainingView, [new ResourceAmount(population, 2000), new ResourceAmount(materials, 4000), new ResourceAmount(oil, 500)], [new ResourceAmount(armor, 500)]);
 
+let queue = [];
+

@@ -12,56 +12,33 @@
             <div id="resources">
                 <h2>RESOURCES</h2>
             </div>
-            <div id="map">
-                <!--<img src="img/flags/czechoslovak.svg">-->
-            </div>
-
-            <div id="queue">
-                
-            </div>
-            
+            <div id="map"></div>
+            <div id="queue"></div>           
             <div id="buildingMenu">
                 <div id="constructionMenu" class="genericMenu">
-                    <!--<span class="unit">
-                        <img src="img/mine.png">
-                    </span>
-                    <span class="unit">
-                        <img src="img/refinery.png">
-                    </span>
-                    <span class="unit">
-                        <img src="img/barracks.png">
-                    </span>
-                    <span class="unit">
-                        <img src="img/factory.png">
-                    </span>-->
                 </div>
                 <div></div>
                 <div id="trainingMenu" class="genericMenu">
-                    <!--<span class="unit">
-                        <img src="img/soldier_icon.png">
-                    </span>
-                    <span-- class="unit">
-                        <img src="img/lt_35.png">
-                    </span-->
                 </div>
             </div>
-        </div>
-        
-        <audio id="hoverElement" src="sound/hover.ogg"></audio>
-        <audio id="clickElement" src="sound/click.ogg"></audio>
+        </div>   
         <script src="minimize.js"></script>
         <script src="script.js"></script>
-        <script>
+        <!--<script>
             let clickElement = $("#clickElement");
             let hoverElement = $("#hoverElement");
-            let musicElement = $("#musicElement");
-
-            AssignSoundEffects($A(".unit"));
-        </script>
+            let musicElement = $("#musicElement");     
+        </script>-->
         <script src="class/resource.js"></script>
         <script src="class/resourceAmount.js"></script>
-        <script src="class/unitView.js"></script>
+        <script src="playlist.js"></script>       
+        <script src="class/audioPlayer.js"></script>       
+        <script src="class/unitView.js"></script>        
         <script src="economy.js"></script>        
-        <script src="production.js"></script>
+        <script src="production.js"></script>    
+        <script>
+            let audio = new AudioPlayer(1,1, $A(".unit"));
+            audio.PlaySongList(playlist);
+        </script>          
     </body>
 </html>

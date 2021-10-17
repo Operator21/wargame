@@ -14,6 +14,11 @@ class UnitView{
 
         span.classList.add("unit");
         let object = this;
+        /*events.on("click", span, function(){
+            let success = object.Clicked();
+            if(!success)
+                alert("Not enough resources");
+        });    */   
         span.addEventListener("click", function() {
             let success = object.Clicked();
             if(!success)

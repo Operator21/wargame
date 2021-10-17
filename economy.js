@@ -16,4 +16,4 @@ setInterval(function(){
     influence.Add(1);
     materials.Add(1*mines.value);
     oil.Add(1*refineries.value);
-}, 1000)
+}, 1000);

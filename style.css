@@ -61,6 +61,7 @@ h1 {
 }
 .toright {
     text-align: right;
+	width: 100%;
 }
 .menu {
 	margin-top: 10%;
@@ -73,6 +74,8 @@ h1 {
 }
 .settings {
 	display: grid;
+}
+.popup {
 	width: 50%;
 	height: max-content;
 	background: #000000f7;
@@ -141,7 +144,7 @@ input {
 }
 .mainUI {
 	display: grid;
-	grid-template-columns: 15% 70% 25%;
+	grid-template-columns: 15% 70% 15%;
 	grid-template-rows: 80vh 20vh;
 }
 #resources {
@@ -170,4 +173,15 @@ input {
 	display: grid;
 	grid-template-columns: 50% 50%;
 	grid-template-rows: 25% 25% 25% 25%;
+}
+body {
+	animation: fadeIn 1s linear;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
