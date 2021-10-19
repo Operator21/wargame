@@ -5,11 +5,19 @@ class QueueSlot {
         this.max = unit.buildTime;
         this.queue = queue;
 
+        this.span = $N("span");
+        this.img = $N("img");
         this.progressBar = $N("progress");
+
+        this.span.classList.add("queueSlot");
+        this.img.src = "img/" + this.unit.type + "/" + this.unit.name + ".png";
+        
         console.log(this.progressBar);
         this.progressBar.value = 0;
         this.progressBar.max = this.max;
-        queueContainer.append(this.progressBar);
+        this.span.append(this.img);
+        this.span.append(this.progressBar);
+        queueContainer.append(this.span);
     }
 
     Progress() {
@@ -22,7 +30,7 @@ class QueueSlot {
     }
 
     BuildingFinished() {
-        this.progressBar.remove();
+        this.span.remove();
         this.unit.gainArray.forEach(gain => {
             gain.resource.Add(gain.amount);
         });

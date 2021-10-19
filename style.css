@@ -171,13 +171,16 @@ input {
 	border: 4px solid #5e5858;
 	width: 100%;
 	display: grid;
-	/*grid-template-columns: 50% 50%;
-	grid-template-rows: 25% 25% 25% 25%;*/
+	/* grid-template-columns: 50% 50%; */
+	/* grid-template-rows: 25% 25% 25% 25%; */
 	overflow-y: scroll;
 	scroll-behavior: smooth;
+	height: max-content;
+	max-height: 100%;
 }
 #queue progress {
-	margin: 2px;
+	/* margin: 2px; */
+	width: 100%;
 }
 body {
 	animation: fadeIn 1s linear;
@@ -189,4 +192,32 @@ body {
 	100% {
 		opacity: 1;
 	}
+}
+.queueSlot {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 30% auto;
+	height: max-content;
+}
+.queueSlot img {
+	width: 100%;
+}
+progress::-webkit-progress-bar {
+	background-color: black; 
+	width: 100%;
+}
+progress {
+	background-color: black;
+	height: 100%;
+}
+
+/* value: */
+progress::-webkit-progress-value {
+	background-color: green !important;
+}
+progress::-moz-progress-bar {
+	background-color: green !important;
+}
+progress {
+	color: green;
 }
