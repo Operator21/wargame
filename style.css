@@ -171,8 +171,13 @@ input {
 	border: 4px solid #5e5858;
 	width: 100%;
 	display: grid;
-	grid-template-columns: 50% 50%;
-	grid-template-rows: 25% 25% 25% 25%;
+	/*grid-template-columns: 50% 50%;
+	grid-template-rows: 25% 25% 25% 25%;*/
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+#queue progress {
+	margin: 2px;
 }
 body {
 	animation: fadeIn 1s linear;
