@@ -16,4 +16,9 @@ setInterval(function(){
     influence.Add(1);
     materials.Add(1*mines.value);
     oil.Add(1*refineries.value);
+    if(queue.size > 0){
+        queue.forEach(function(slot) {
+            slot.Progress();
+        });
+    }
 }, 1000);

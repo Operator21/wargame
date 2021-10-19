@@ -33,7 +33,7 @@ class AudioPlayer {
     }
 
     PlayHover(object){
-        console.log(this);
+        //console.log(this);
         object.hoverPlayer.currentTime = 0;
         object.hoverPlayer.play();
     }

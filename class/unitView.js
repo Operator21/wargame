@@ -1,10 +1,8 @@
 class UnitView{
-    constructor(name, type, viewContainer, costArray, gainArray) {
-        this.name = name;
-        this.type = type;
-
-        this.costArray = costArray;
-        this.gainArray = gainArray;
+    constructor(viewContainer, queueContainer, queue, unit) {
+        this.unit = unit;
+        this.queueContainer = queueContainer;
+        this.queue = queue;
         this.GenerateHTMLView(viewContainer);
     }
 
@@ -31,24 +29,22 @@ class UnitView{
     }
 
     get Path(){
-        return "img/" + this.type + "/" + this.name + ".png";
+        return "img/" + this.unit.type + "/" + this.unit.name + ".png";
     }
 
     Clicked(){
-        console.log(this.name);
+        console.log(this.unit.name);
         let canBuy = true;
-        this.costArray.forEach(cost => {
+        this.unit.costArray.forEach(cost => {
             if(cost.resource.value < cost.amount) {
                 canBuy = false;
             }
         });
         if(canBuy){
-            this.costArray.forEach(cost => {
+            this.unit.costArray.forEach(cost => {
                 cost.resource.Substract(cost.amount);
             });
-            this.gainArray.forEach(gain => {
-                gain.resource.Add(gain.amount);
-            });
+            this.queue.add(new QueueSlot(this.unit, this.queueContainer, this.queue));
         }       
         return canBuy;
     }
