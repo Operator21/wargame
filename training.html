@@ -41,6 +41,16 @@
         <script>
             let audio = new AudioPlayer(1,1, $A(".unit"));
             audio.PlaySongList(playlist);
+
+            if(localStorage.getItem("lastPlayed")){
+                alert("Last played on: " + localStorage.getItem("lastPlayed"));
+            } else {
+                alert("It seems you are playing for first time");
+            }
+
+            window.addEventListener("beforeunload", function(){
+                localStorage.setItem("lastPlayed", Date.now());
+            }, false);
         </script>          
     </body>
 </html>

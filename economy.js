@@ -9,13 +9,13 @@ let oil = new Resource("Oil", 0, resourceDiv);
 let mines = new Resource("Mines", 0, resourceDiv);
 let refineries = new Resource("Refineries", 0, resourceDiv);
 let barracks = new Resource("Barracks", 0, resourceDiv);
-let factories = new Resource("Factories", 0, resourceDiv);
+let factories = new Resource("Factories", 5, resourceDiv);
 
 setInterval(function(){
     //console.log("resources added");
     influence.Add(1);
-    materials.Add(1*mines.value);
-    oil.Add(1*refineries.value);
+    materials.Add(20*mines.value);
+    oil.Add(5*refineries.value);
     if(queue.size > 0){
         queue.forEach(function(slot) {
             slot.Progress();
