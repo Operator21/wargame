@@ -12,7 +12,11 @@
             <div id="resources">
                 <h2>RESOURCES</h2>
             </div>
-            <div id="map"></div>
+            <div id="mapContainer">
+                <svg id="map" viewBox="0 0 100 100">
+
+                </svg>
+            </div>
             <div id="queue"></div>           
             <div id="buildingMenu">
                 <div id="constructionMenu" class="genericMenu">
@@ -24,13 +28,10 @@
         </div>   
         <script src="minimize.js"></script>
         <script src="script.js"></script>
-        <!--<script>
-            let clickElement = $("#clickElement");
-            let hoverElement = $("#hoverElement");
-            let musicElement = $("#musicElement");     
-        </script>-->
         <script src="class/resource.js"></script>
         <script src="class/resourceAmount.js"></script>
+        <script src="class/country.js"></script>
+        <script src="countryList.js"></script>
         <script src="class/unit.js"></script>
         <script src="class/queueSlot.js"></script>
         <script src="playlist.js"></script>       
@@ -43,15 +44,16 @@
             let audio = new AudioPlayer(1,1, $A(".unit"));
             audio.PlaySongList(playlist);
 
-            if(localStorage.getItem("lastPlayed")){
+            /*if(localStorage.getItem("lastPlayed")){
                 alert("Last played on: " + localStorage.getItem("lastPlayed"));
             } else {
                 alert("It seems you are playing for first time");
-            }
+            }*/
 
-            window.addEventListener("beforeunload", function(){
-                localStorage.setItem("lastPlayed", Date.now());
-            }, false);
+            $("#map").append(czechoslovakia.getHtml());
+            $("#map").append(austria.getHtml());
+            $("#map").append(germany.getHtml());
+
         </script>          
     </body>
 </html>
