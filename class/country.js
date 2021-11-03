@@ -12,7 +12,7 @@ class Country {
 
         g.append(path);
 
-        g.setAttribute("transform", this.transform);
+        //g.setAttribute("transform", this.transform);
         path.setAttribute("d", this.d);
         path.setAttribute("fill", this.fill);
         path.setAttribute("stroke-width", this.strokeWidth);
