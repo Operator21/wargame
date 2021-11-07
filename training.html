@@ -21,7 +21,7 @@
             <div id="buildingMenu">
                 <div id="constructionMenu" class="genericMenu">
                 </div>
-                <div></div>
+                <div class="separator"></div>
                 <div id="trainingMenu" class="genericMenu">
                 </div>
             </div>
@@ -30,6 +30,7 @@
         <script src="script.js"></script>
         <script src="class/resource.js"></script>
         <script src="class/resourceAmount.js"></script>
+        <script src="class/countryView.js"></script>
         <script src="class/country.js"></script>
         <script src="countryList.js"></script>
         <script src="class/unit.js"></script>
@@ -57,6 +58,10 @@
             $("#map").append(hungary.getHtml());
             $("#map").append(romania.getHtml());
 
-        </script>          
+        </script>  
+        <div class="popup hidden" id="countryInfo">
+            <h2 id="countryName"></h2>
+            <h3 id="countryPopulation"></h3>
+        </div>        
     </body>
 </html>

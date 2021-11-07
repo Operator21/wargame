@@ -7,25 +7,26 @@ class UnitView{
     }
 
     GenerateHTMLView(viewContainer){
-        let span = $N("span");
+        //let span = $N("span");
         let img = $N("img");
 
-        span.classList.add("unit");
+        //span.classList.add("unit");
+        img.classList.add("unit");
         let object = this;
         /*events.on("click", span, function(){
             let success = object.Clicked();
             if(!success)
                 alert("Not enough resources");
         });    */   
-        span.addEventListener("click", function() {
+        img.addEventListener("click", function() {
             let success = object.Clicked();
             if(!success)
                 alert("Not enough resources");
         });
 
         img.src = this.Path;
-        span.append(img);
-        viewContainer.append(span);
+        //span.append(img);
+        viewContainer.append(img);
     }
 
     get Path(){
