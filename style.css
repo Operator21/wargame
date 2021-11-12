@@ -152,7 +152,7 @@ input {
 #resources {
 	background-image: url("img/ui/metal.jpg");
 	border: 5px #3e3e3e solid;
-	height: max-content;
+	height: 100%;
 	background-size: cover;
 	border-right: 0px;
 }
@@ -251,4 +251,9 @@ path {
 }
 .playerCountry {
 	fill: #0080005c;
+}
+@media screen and (max-width: 1500px) {
+	.mainUI {
+		grid-template-columns: 20% 65% 15%;
+	}
 }
