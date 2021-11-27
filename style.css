@@ -179,9 +179,16 @@ input {
 	max-height: 100%;
 	border-left: 0px;
 	background-size: cover;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+#queue::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 #queue progress {
-	/* margin: 2px; */
+	position: absolute;
+	height: 100%;
 	width: 100%;
 }
 body {
@@ -197,12 +204,16 @@ body {
 }
 .queueSlot {
 	width: 100%;
-	display: grid;
-	grid-template-columns: 30% auto;
-	height: max-content;
+	height: 100px;
+	position: relative;
+	display: block;
 }
-.queueSlot img {
-	width: 100%;
+.queueSlot video {
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
 }
 progress::-webkit-progress-bar {
 	background-color: rgb(26, 26, 26); 
