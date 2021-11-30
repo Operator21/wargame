@@ -6,6 +6,10 @@
     font-family: Stamp;
     src: url("font/oldstamper.ttf");
 }
+@font-face {
+    font-family: Typewritter;
+    src: url("font/typewritter.ttf");
+}
 * {
     box-sizing: border-box;
     margin: 0;
@@ -263,6 +267,45 @@ path {
 .playerCountry {
 	fill: #0080005c;
 }
+#eWindow {
+	display: none;
+	width: 510px;
+	height: max-content;
+	background-image: url("https://img.freepik.com/free-photo/old-paper-texture-vintage-paper-background_262663-432.jpg?size=626&ext=jpg");
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	bottom: 0;
+	border: solid 2px #404040;
+	background-size: cover;
+	padding: 10px;
+	grid-template-rows: max-content max-content max-content;
+}
+#eChoiceList {
+	display: grid;
+	height: max-content;
+}
+#eChoiceList button {
+	color: black;
+	padding: 4px;
+	border-radius: 0;
+	border: 0;
+	margin: 1px;
+	background: #ffffff61;
+}
+#eChoiceList button:hover {
+	background: white;
+	cursor: pointer;
+}
+#eWindow * {
+	font-family: "Typewritter";
+	color: black;
+	font-size: 30px;
+}
+
+
 @media screen and (max-width: 1500px) {
 	.mainUI {
 		grid-template-columns: 20% 65% 15%;

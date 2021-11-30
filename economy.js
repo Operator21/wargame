@@ -12,16 +12,26 @@ let barracks = new Resource("Barracks", 0, resourceDiv);
 let factories = new Resource("Factories", 5, resourceDiv);*/
 
 let playerData = new PlayerData(0, 13410750, 0, 0, 1000, 0, 0, 0, 0, 5, resourceDiv);
-            alert(playerData.ToJson());
+//alert(playerData.ToJson());
+let time = 0;
 
 setInterval(function(){
+    switch(time){
+        case 1:
+            DisplayEvent(welcome);
+            break;
+        case 10:
+            DisplayEvent(focus);
+            break;
+    }
     //console.log("resources added");
     playerData.influence.Add(1);
-    playerData.materials.Add(20*playerData. mines.value);
+    playerData.materials.Add(20*playerData.mines.value);
     playerData.oil.Add(5*playerData.refineries.value);
     if(queue.size > 0){
         queue.forEach(function(slot) {
             slot.Progress();
         });
     }
+    time++;
 }, 1000);
