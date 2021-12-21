@@ -26,7 +26,8 @@ function GoTo(file){
     window.location.href = file + ".html";
 }
 
-function DisplayEvent(event, interval){
+function DisplayEvent(event){
+    pause = true;
     eventWindow.style.display = "grid";
     eventTitle.innerHTML = event.title; 
     eventDesc.innerHTML = event.description;
@@ -39,6 +40,7 @@ function DisplayEvent(event, interval){
             if(choice.action)
                 window[choice.action]();
             eventWindow.style.display = "none";
+            pause = false;
         });
     }); 
 }
