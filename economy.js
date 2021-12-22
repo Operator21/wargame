@@ -16,6 +16,7 @@ let playerData = new PlayerData(0, 13410750, 0, 0, 1000, 0, 0, 0, 0, 5, resource
 let time = 0;
 let pause = false;
 
+//happens every second
 setInterval(function(){
     if(!pause) {
         let event = eventList.find(e => e.time === time);
