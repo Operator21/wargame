@@ -1,5 +1,5 @@
 class CountryView {
-    constructor(transform, d){
+    constructor(transform, d, fill = ""){
         this.transform = transform;
         this.d = d;
         this.strokeWidth = ".6816";
@@ -9,6 +9,8 @@ class CountryView {
         
         this.g.append(this.path);
         this.setColor("#d0d0d0");
+
+        this.setColor(fill);
     }
 
     getHtml(){
@@ -20,6 +22,7 @@ class CountryView {
     }
 
     setColor(color){
-        this.path.classList.add(color);
+        if(color.length > 0)
+            this.path.classList.add(color);
     }
 }

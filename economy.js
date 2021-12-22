@@ -18,14 +18,9 @@ let pause = false;
 
 setInterval(function(){
     if(!pause) {
-        switch(time){
-            case 1:
-                DisplayEvent(welcome);
-                break;
-            case 10:
-                DisplayEvent(focus);
-                break;
-        }
+        let event = eventList.find(e => e.time === time);
+        if(event)
+            DisplayEvent(event);
         //console.log("resources added");
         playerData.influence.Add(1);
         playerData.materials.Add(20*playerData.mines.value);

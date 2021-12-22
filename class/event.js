@@ -3,6 +3,6 @@ class GameEvent {
         this.time = time;
         this.title = title;
         this.description = desc;
-        this.choices = choices;
+        this.choices = choices;        
     }
 }

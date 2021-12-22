@@ -305,6 +305,9 @@ path {
 	font-size: 30px;
 }
 
+.enemy {
+	fill: #a6000063;
+}
 
 @media screen and (max-width: 1500px) {
 	.mainUI {
