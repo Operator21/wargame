@@ -30,7 +30,7 @@ class UnitView{
     }
 
     get Path(){
-        return "img/" + this.unit.type + "/" + this.unit.name + ".png";
+        return "../img/" + this.unit.type + "/" + this.unit.name + ".png";
     }
 
     Clicked(){

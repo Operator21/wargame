@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+.splitter {
+    display: grid;
+    grid-template-columns: 50% auto;
+    width: 100%;
+    height: 100%;
+}
+video {
+    width: 100%;
+    padding: 5px;
+    height: 100%;
+    object-fit: cover;
+}
+progress {
+    width: 100%;
+}
+.support {
+    position: fixed;
+    z-index: 1;
+    width: 400px;
+    height: 150px;
+}
+/*.player { 
+    filter: sepia(100%) saturate(100%) hue-rotate(100deg);
+}
+.enemy {
+    filter: sepia(100%) saturate(100%) hue-rotate(290deg);
+}*/

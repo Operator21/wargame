@@ -1,9 +1,8 @@
 class PlayerData {
-    constructor(influence, population, infantry, armor, materials, oil, mines, refineries, barracks, factories, resourceDiv) {
+    constructor(influence, population, military, materials, oil, mines, refineries, barracks, factories, resourceDiv) {
         this.influence = new Resource("Political Influence", influence, resourceDiv);
         this.population = new Resource("Population", population, resourceDiv);
-        this.infantry = new Resource("Infantry Strength", infantry, resourceDiv);
-        this.armor = new Resource("Armored Strength", armor, resourceDiv);
+        this.military = new Resource("Military Strength", military, resourceDiv);
         this.materials = new Resource("Materials", materials, resourceDiv);
         this.oil = new Resource("Oil", oil, resourceDiv);
         this.mines = new Resource("Mines", mines, resourceDiv);

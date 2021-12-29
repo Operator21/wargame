@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../script/helper.js"></script>
+        <script src="../class/audioPlayer.js"></script>
+        <title>The End</title>
+        <link rel="stylesheet" href="../style/style.css">
+        <link rel="stylesheet" href="../style/endscreen.css">
+    </head>
+    <body>
+        <div class="center">
+            <a onclick="GoTo('menu')"><h1 class="button">THE END</h1></a>
+            <video id="endVideo" autoplay loop>
+            </video>
+        </div>
+        <script>
+            let video = $("#endVideo");
+            let result = new URLSearchParams(window.location.search).get("result");
+            window.addEventListener("load", () => {
+                let audio = new AudioPlayer(1,1, $A(".unit"));
+
+                video.src = "../video/";
+                switch(result){
+                    case "czesur":
+                        video.src += "cz_surrender.webm";
+                        audio.PlaySong("surrender.m4a")
+                        break;
+                    case "gerwin":
+                        video.src += "cz_defeat.webm";
+                        audio.PlaySong("defeat.ogg")
+                        break;
+                    case "czewin":
+                        video.src += "cz_victory.webm";
+                        audio.PlaySong("victory.ogg")
+                        break;
+                    default:
+                        video.src += "";
+                }
+            });
+        </script>
+    </body>
+</html>

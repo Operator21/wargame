@@ -12,15 +12,16 @@ class QueueSlot {
         this.video.autoplay = true;
         this.video.loop = true;
 
+        this.video.src = "../video/";
         switch(unit.name){
             case "infantry":
-                this.video.src = "video/train.webm";    
+                this.video.src += "train.webm";    
                 break;
             case "tank":
-                this.video.src = "video/tank.webm";    
+                this.video.src += "tank.webm";    
                 break;
             default:
-                this.video.src = "video/crane.webm";               
+                this.video.src += "crane.webm";               
         }
             
 
