@@ -35,7 +35,7 @@
         <script>
             window.addEventListener("load", () => {
                 let audio = new AudioPlayer(1,1, $A(".unit"));
-                audio.PlaySongList(playlist);
+                //audio.PlaySongList(playlist);
 
                 $("#map").append(czechoslovakia.getHtml());
                 $("#map").append(austria.getHtml());
@@ -43,19 +43,20 @@
                 $("#map").append(poland.getHtml());
                 $("#map").append(hungary.getHtml());
                 $("#map").append(romania.getHtml());
-            });
 
-            /*if(localStorage.getItem("lastPlayed")){
-                alert("Last played on: " + localStorage.getItem("lastPlayed"));
-            } else {
-                alert("It seems you are playing for first time");
-            }*/
+                if(localStorage.getItem("played")){
+                    eventList.push(returningPlayerEvent);
+                } else {
+                    eventList.push(newPlayerEvent);
+                }
+            });
         </script>  
         <div class="popup hidden" id="countryInfo">
             <a class="button toright" onclick="ClosePopUp(this)">Close</a>
             <h2 id="countryName"></h2>
             <h3 id="countryPopulation"></h3>
-        </div>   
+        </div>  
+        <div id="blocker"></div>
         <div id="eWindow" class="event">
             <h1 id="eTitle">Event</h1>
             <p id="eDesc">desc</p>

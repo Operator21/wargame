@@ -38,6 +38,7 @@ function GoTo(file){
 
 function DisplayEvent(event){
     pause = true;
+    $("#blocker").style.display = "block";
     eventWindow.style.display = "grid";
     eventTitle.innerHTML = event.title; 
     eventDesc.innerHTML = event.description;
@@ -50,6 +51,7 @@ function DisplayEvent(event){
             if(choice.action)
                 window[choice.action]();
             eventWindow.style.display = "none";
+            $("#blocker").style.display = "none";
             pause = false;
         });
     }); 
@@ -70,14 +72,4 @@ function IncludeScript(container, array) {
 
 function IncludeClass(container, array) {
     Include("class", container, array);
-}
-
-function CanBuy(costArray){
-    let canBuy = true;
-    costArray.forEach(cost => {
-        if(cost.resource.value < cost.amount) {
-            canBuy = false;
-        }
-    });  
-    return canBuy;
 }

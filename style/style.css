@@ -8,7 +8,8 @@
 }
 @font-face {
     font-family: Typewritter;
-    src: url("../font/typewritter.ttf");
+    src: url("../font/typewriter.ttf");
+    /*src: url("../font/1942.ttf");*/
 }
 * {
     box-sizing: border-box;
@@ -109,8 +110,8 @@ input {
 	display: block;
 	border: 3px #222 solid;
 	margin: 1px;
-	transition-property: background-color;
-	transition-duration: 500ms;
+	/*transition-property: background-color;
+	transition-duration: 500ms;*/
 	max-width: 74px;
 }
 .unit img {
@@ -118,7 +119,7 @@ input {
 	height: 100%;
 }
 .unit:hover {
-	background-color: rgb(95, 95, 0);
+	border: solid 1px yellow;
 	cursor: pointer;
 }
 #buildingMenu {
@@ -303,6 +304,25 @@ path {
 	font-family: "Typewritter";
 	color: black;
 	font-size: 30px;
+}
+
+#blocker {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.6;
+}
+
+.buyable {
+	background : #1f7712;
+}
+
+.locked {
+	background : #771212;
 }
 
 .enemy {

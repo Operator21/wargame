@@ -53,7 +53,7 @@ class AudioPlayer {
     PlaySongList(array){
         array.forEach(song => {
             let source = $N("source");
-            source.src = "../sound/music/" + song;
+            source.src = "../sound/" + song;
             this.musicPlayer.append(source);
         });
         this.musicPlayer.play();
