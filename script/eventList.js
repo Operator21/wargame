@@ -190,7 +190,7 @@ function SudetenGiven(){
 function EndBattle() {
     const germanStrength = 1500000;
     localStorage.setItem("played", true);
-    alert(playerData.military.Get() + " x " + germanStrength)
+    //alert(playerData.military.Get() + " x " + germanStrength)
     if(playerData.military.Get() >= germanStrength){
         window.location = "battle.html?result=czewin";
     } else {
