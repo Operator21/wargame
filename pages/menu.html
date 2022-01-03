@@ -1,5 +1,7 @@
 <script>
-    alert("Before playing, make sure autoplay for video and sound is allowed on this domain, otherwise some functions might not work properly. Firefox is heavily recommended as Chromium blocks autoplay without user interaction.");
+    if(localStorage.getItem("played") == "false"){
+        alert("Before playing, make sure autoplay for video and sound is allowed on this domain, otherwise some functions might not work properly. Firefox is heavily recommended as Chromium blocks autoplay without user interaction.");
+    }
 </script>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,6 +56,9 @@
 
                 let audio = new AudioPlayer(musicControl.value, audioControl.value, $A(".button"));
                 audio.PlaySong("menu_track.ogg");
+
+                musicControl.value = audio.musicPlayer.volume;            
+                audioControl.value = audio.hoverPlayer.volume;
 
                 musicControl.addEventListener("input", function() {
                     audio.ChangeMusicVolume(musicControl.value)
