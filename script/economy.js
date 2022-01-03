@@ -8,9 +8,6 @@ let pause = false;
 //happens every second
 setInterval(function(){
     if(!pause) {
-        views.forEach(view => {
-            view.UpdateGraphics();
-        });
 
         let event = eventList.find(e => e.time === time);
         if(event)
@@ -24,6 +21,10 @@ setInterval(function(){
                 slot.Progress();
             });
         }
+        views.forEach(view => {
+            view.UpdateGraphics();
+        });
+
         time++;
     }   
 }, 1000);
