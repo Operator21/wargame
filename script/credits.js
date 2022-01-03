@@ -5,6 +5,7 @@ let creditsArray = [
     "----------------",
     "Codename Panzers: Phase One",
     "Codename Panzers: Phase Two",
+    "Company of Heroes",
     "----------------",
     "All materials were used for study purposes only."
 ];
