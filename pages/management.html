@@ -27,11 +27,31 @@
             </div>
         </div>   
         <script src="../script/helper.js"></script>
+        <script src="../class/audioPlayer.js"></script>
+        <script src="../class/resource.js"></script>
+        <script src="../class/resourceAmount.js"></script>
+        <script src="../class/countryView.js"></script>
+        <script src="../class/country.js"></script>
+        <script src="../class/unit.js"></script>
+        <script src="../class/queueSlot.js"></script>
+        <script src="../class/unitView.js"></script>
+        <script src="../class/playerData.js"></script>
+        <script src="../class/choice.js"></script>
+        <script src="../class/event.js"></script>
+
+        <script src="../script/countryList.js"></script>
+        <script src="../script/playlist.js"></script>
+        <script src="../script/eventList.js"></script>
+        <script src="../script/economy.js"></script>
+        <script src="../script/production.js"></script>
+
+        <!--
         <div id="scriptDiv"></div>
+        
         <script>
             IncludeClass($("#scriptDiv"), ["audioPlayer", "resource", "resourceAmount", "countryView", "country", "unit", "queueSlot", "unitView", "playerData", "choice", "event"]);
             IncludeScript($("#scriptDiv"), ["countryList", "playlist", "eventList", "economy", "production"]);
-        </script>
+        </script>-->
         <script>
             window.addEventListener("load", () => {
                 let audio = new AudioPlayer(1,1, $A(".unit"));
