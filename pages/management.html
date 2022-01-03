@@ -35,7 +35,7 @@
         <script>
             window.addEventListener("load", () => {
                 let audio = new AudioPlayer(1,1, $A(".unit"));
-                //audio.PlaySongList(playlist);
+                audio.PlaySongList(playlist);
 
                 $("#map").append(czechoslovakia.getHtml());
                 $("#map").append(austria.getHtml());
@@ -49,7 +49,7 @@
                 } else {
                     eventList.push(newPlayerEvent);
                 }
-            });
+            });            
         </script>  
         <div class="popup hidden" id="countryInfo">
             <a class="button toright" onclick="ClosePopUp(this)">Close</a>
@@ -67,6 +67,12 @@
             let eventTitle = $("#eTitle");
             let eventDesc = $("#eDesc");
             let eventChoiceList = $("#eChoiceList");
+
+            window.addEventListener("click", () => {
+                views.forEach(view => {
+                    view.UpdateGraphics();
+                });
+            });
         </script>     
     </body>
 </html>

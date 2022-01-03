@@ -10,8 +10,17 @@ class AudioPlayer {
         $("body").append(this.clickPlayer);
         $("body").append(this.musicPlayer);
 
-        
-        this.ChangeVolume(this.musicPlayer, musicVolume);
+        if(localStorage.getItem("music")) {
+            this.ChangeMusicVolume(localStorage.getItem("music"));
+        } else {
+            this.ChangeMusicVolume(musicVolume);
+        }
+
+        if(localStorage.getItem("audio")) {
+            this.ChangeAudioVolume(localStorage.getItem("audio"));
+        } else {
+            this.ChangeAudioVolume(audioVolume);
+        }
 
         this.SetSource(this.hoverPlayer, "hover.ogg");
         this.SetSource(this.clickPlayer, "click.ogg");
@@ -51,12 +60,16 @@ class AudioPlayer {
     }
 
     PlaySongList(array){
-        array.forEach(song => {
-            let source = $N("source");
-            source.src = "../sound/" + song;
-            this.musicPlayer.append(source);
+        let index = 0;
+        this.SetSource(this.musicPlayer, array[index]);
+        this.musicPlayer.addEventListener("ended", () => {
+            if(index+1 < array.length)
+                index++;
+            else
+                index = 0;
+            this.SetSource(this.musicPlayer, array[index]);
+            this.musicPlayer.play();
         });
-        this.musicPlayer.play();
     }
     
     ChangeVolume(player, value){
@@ -65,11 +78,13 @@ class AudioPlayer {
 
     ChangeMusicVolume(value){
         this.ChangeVolume(this.musicPlayer, value);
+        localStorage.setItem("music", value);
     }
 
     ChangeAudioVolume(value){
         this.ChangeVolume(this.hoverPlayer, value);
         this.ChangeVolume(this.clickPlayer, value);
+        localStorage.setItem("audio", value);
     }
 
     SetSource(player, path){

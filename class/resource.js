@@ -26,6 +26,10 @@ class Resource{
         this.RefreshView();
     }
 
+    Get() {
+        return this.value;
+    }
+
     RefreshView(){
         if(this.value > 999999){
             this.viewElement.innerHTML = (this.value/1000000).toFixed(1) + "M";

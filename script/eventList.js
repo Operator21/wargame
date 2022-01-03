@@ -105,7 +105,26 @@ new GameEvent(
     "Both parties agreed on terms. We give up Sudenland or our \"Allies\" won't help us if Germany attacks.",
     [
         new Choice("We won't stand for this! (Germany will attack)", "GermanAttack"),
-        new Choice("We will comply this time.", "SudetenGiven")
+        new Choice("We will comply this time", "SudetenGiven")
+    ]
+),
+
+new GameEvent(
+    242,
+    "Peace for our time - 30 September 1938",
+    "British Prime Minister Neville Chamberlain received a rowdy homecoming after signing a peace pact with Nazi Germany. Saying in his speech that he has achieved Peace for our time.",
+    [
+        new Choice("Let's hope that's true"),
+        new Choice("Doubtful")
+    ]
+),
+
+new GameEvent(
+    300,
+    "Germany plans to invade",
+    "Our recon has reported that large number of German troops are preparing to invade rest of our country. We don't have much time to prepare.",
+    [
+        new Choice("We knew they couldn't be trusted")
     ]
 ),
 
@@ -114,9 +133,9 @@ new GameEvent(
     "Final Decision",
     "Time has come, Germany is ready to invade our lands. We must decide how we will proceed.",
     [
-        new Choice("Fools! We are more than ready to handle them.", "EndBattle"),
-        new Choice("This is our final stand!", "EndBattle"),
-        new Choice("We can't afford to lose lives. Surrender.", "Surrender"),
+        new Choice("Fools! We are more than ready to handle them. (Germany will attack)", "EndBattle"),
+        new Choice("This is our final stand! (Germany will attack)", "EndBattle"),
+        new Choice("We can't afford to lose lives. Surrender. (Czechoslovakia surrenders)", "Surrender"),
     ]
 )
 ];
@@ -169,11 +188,14 @@ function SudetenGiven(){
 }
 
 function EndBattle() {
+    const germanStrength = 1500000;
     localStorage.setItem("played", true);
-    if(playerData.military > 1500000){
+    alert(playerData.military.Get() + " x " + germanStrength)
+    if(playerData.military.Get() >= germanStrength){
         window.location = "battle.html?result=czewin";
+    } else {
+        window.location = "battle.html?result=gerwin";
     }
-    window.location = "battle.html?result=gerwin";
 }
 
 function Surrender() {

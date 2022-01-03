@@ -1,12 +1,10 @@
 let creditsArray = [
     "Game by Stanislav Zdych",
     "----------------",
-    "Music:",
+    "Music used from:",
     "----------------",
-    "The Ice Giants Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/",
-    "Strength of the Titans Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/",
-    "Gothamlicious Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/",
-    "Five Armies Kevin MacLeod (incompetech.com) Licensed under Creative Commons: By Attribution 4.0 License http://creativecommons.org/licenses/by/4.0/",
+    "Codename Panzers: Phase One",
+    "Codename Panzers: Phase Two",
     "----------------",
     "All materials were used for study purposes only."
 ];
