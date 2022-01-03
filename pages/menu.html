@@ -1,5 +1,5 @@
 <script>
-    if(localStorage.getItem("played") == "false"){
+    if(localStorage.getItem("played") != "true"){
         alert("Before playing, make sure autoplay for video and sound is allowed on this domain, otherwise some functions might not work properly. Firefox is heavily recommended as Chromium blocks autoplay without user interaction.");
     }
 </script>
